@@ -148,6 +148,7 @@ elif option == 'Startup':
     startup_name = st.sidebar.selectbox('Select Startup', sorted(df['startup'].dropna().unique().tolist()))
     btn1 = st.sidebar.button('Find Startup')
     if btn1:
+        st.subheader('Startup Analysis')
         st.write(df[df['startup'] == startup_name])
 else:
     select_investor = st.sidebar.selectbox('Investor', all_investors)
