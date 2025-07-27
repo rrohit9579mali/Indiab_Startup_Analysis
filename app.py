@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 # Load data
 st.title('Indian Startup Analysis')
+st.title('made my mayur ')
 df = pd.read_csv('Startup_Funding_Analysis1.csv')
 st.sidebar.title("Indian Startup")
 df['date']=pd.to_datetime(df['date'],errors='coerce')
