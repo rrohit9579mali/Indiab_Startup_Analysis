@@ -3,7 +3,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 # Load data
 st.title('Indian Startup Analysis')
-st.title('made my mayur ')
 df = pd.read_csv('Startup_Funding_Analysis1.csv')
 st.sidebar.title("Indian Startup")
 df['date']=pd.to_datetime(df['date'],errors='coerce')
@@ -78,7 +77,7 @@ def load_investors(investor):
     startup_investors = startup_investors.apply(lambda investors: list(set(i.strip() for i in investors if i.strip())))
     similar_investors_df = startup_investors.reset_index().rename(columns={'investors': 'similar_investors'}).head(10)
     st.dataframe(similar_investors_df)
-
+    data=df['investors'].plot(kind='bar')
 
 #  overall_Analysis
 
