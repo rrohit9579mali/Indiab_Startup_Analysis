@@ -78,9 +78,9 @@ def load_investors(investor):
     similar_investors_df = startup_investors.reset_index().rename(columns={'investors': 'similar_investors'}).head(10)
     st.dataframe(similar_investors_df)
 
-    fig3,ax3=plt.subplots()
-        ax3.plot(df['investors'])
-        st.pyplot(fig3)
+    fig00,ax00=plt.subplots()
+        ax00.plot(df['investors'])
+        st.pyplot(fig00)
 
 #  overall_Analysis
 
