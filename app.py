@@ -77,7 +77,10 @@ def load_investors(investor):
     startup_investors = startup_investors.apply(lambda investors: list(set(i.strip() for i in investors if i.strip())))
     similar_investors_df = startup_investors.reset_index().rename(columns={'investors': 'similar_investors'}).head(10)
     st.dataframe(similar_investors_df)
-    data=df['investors'].plot(kind='bar')
+
+    fig3,ax3=plt.subplots()
+        ax3.plot(df['investors'])
+        st.pyplot(fig3)
 
 #  overall_Analysis
 
